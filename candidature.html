@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aiguilles des Îles — Déposez votre candidature en ligne. Formulaire de participation au concours régional de stylisme.">
+  <title>Candidature | Aiguilles des Îles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+<header class="site-header" role="banner">
+  <a class="brand" href="index.html" aria-label="Aiguilles des Îles - Accueil">
+    <span class="brand-mark" aria-hidden="true"><img src="assets/images/Logo aiguille des îles .png" alt="Aiguilles des Îles"></span>
+    <span class="brand-name">AIGUILLES <small>DES ÎLES</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+  </button>
+  <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navigation principale">
+    <a href="index.html" data-page="index">Accueil</a>
+    <a href="concours.html" data-page="concours">Le concours</a>
+    <a href="calendrier.html" data-page="calendrier">Calendrier</a>
+    <a href="contact.html" data-page="contact">Contact</a>
+    <a class="nav-cta" href="candidature.html" data-page="candidature" aria-current="page">Candidater <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main-content">
+  <section class="page-hero page-hero-application" aria-labelledby="page-hero-title">
+    <div class="page-hero-content reveal">
+      <p class="eyebrow light">AIGUILLES DES ÎLES</p>
+      <h1 id="page-hero-title">Présentez votre<br><em>talent.</em></h1>
+      <p>Votre candidature commence ici.</p>
+    </div>
+  </section>
+
+  <section class="application section-pad" aria-labelledby="application-title">
+    <div class="application-heading reveal">
+      <div class="section-kicker">CANDIDATURE EN LIGNE</div>
+      <h2 id="application-title">Faites le premier <em>pas.</em></h2>
+      <p>Remplissez les informations ci-dessous et préparez votre portfolio de créations.</p>
+      <div class="application-reminder">
+        <strong>Avant de commencer</strong>
+        <p>Vous devez avoir au moins 18 ans, résider dans l&rsquo;une des trois îles et disposer d&rsquo;un portfolio.</p>
+        <a class="text-link dark-link" href="concours.html">Consulter les conditions <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <form class="application-form reveal" id="applicationForm" novalidate aria-label="Formulaire de candidature">
+      <div class="form-topline" aria-hidden="true"><span>FORMULAIRE DE CANDIDATURE</span><span>01 / 01</span></div>
+      <div class="form-grid">
+        <label>Nom <input type="text" name="nom" placeholder="Votre nom" required autocomplete="family-name"></label>
+        <label>Prénom <input type="text" name="prenom" placeholder="Votre prénom" required autocomplete="given-name"></label>
+        <label>Date de naissance <input type="date" name="naissance" required autocomplete="bday"></label>
+        <label>Téléphone <input type="tel" name="telephone" placeholder="+269 ..." required autocomplete="tel"></label>
+        <label class="full">Adresse / lieu de résidence <input type="text" name="adresse" placeholder="Ville, quartier..." required autocomplete="address-line1"></label>
+        <label>Île de résidence<select name="ile" required autocomplete="address-level1">
+          <option value="">Sélectionner une île</option>
+          <option>Grande Comore</option>
+          <option>Anjouan</option>
+          <option>Mohéli</option>
+        </select></label>
+        <label>Spécialité stylistique <input type="text" name="specialite" placeholder="Ex. : couture traditionnelle..." autocomplete="off"></label>
+        <label class="full">Présentation et parcours <textarea name="presentation" rows="4" placeholder="Parlez-nous de vous et de votre univers..." required></textarea></label>
+        <label class="full upload-label">Portfolio (images ou PDF) <input type="file" name="portfolio" accept="image/*,.pdf" multiple><small>Ajoutez des images de vos créations ou un document PDF. Taille maximale conseillée : 10 Mo.</small></label>
+      </div>
+      <label class="consent"><input type="checkbox" required> <span>Je confirme l&rsquo;exactitude des informations fournies.</span></label>
+      <button class="button button-dark" type="submit">Envoyer ma candidature <span aria-hidden="true">↗</span></button>
+      <p class="form-disclaimer">Démo frontend : ce formulaire ne transmet pas encore les données à l&rsquo;organisation. Un backend sera nécessaire pour enregistrer les dossiers.</p>
+      <div class="form-message" id="formMessage" role="status" aria-live="polite" hidden></div>
+    </form>
+  </section>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <a class="brand footer-brand" href="index.html" aria-label="Aiguilles des Îles - Accueil">
+    <span class="brand-mark" aria-hidden="true"><img src="assets/images/Logo aiguille des îles .png" alt="Aiguilles des Îles"></span>
+    <span class="brand-name">AIGUILLES <small>DES ÎLES</small></span>
+  </a>
+  <p>Révéler les talents. Célébrer nos îles.</p>
+  <span class="copyright">© <span class="year" aria-live="polite"></span> Aiguilles des Îles</span>
+</footer>
+</body>
+</html>

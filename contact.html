@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aiguilles des Îles — Une question sur le concours ? Contactez l'organisation.">
+  <title>Contact | Aiguilles des Îles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+<header class="site-header" role="banner">
+  <a class="brand" href="index.html" aria-label="Aiguilles des Îles - Accueil">
+    <span class="brand-mark" aria-hidden="true"><img src="assets/images/Logo aiguille des îles .png" alt="Aiguilles des Îles"></span>
+    <span class="brand-name">AIGUILLES <small>DES ÎLES</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+  </button>
+  <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navigation principale">
+    <a href="index.html" data-page="index">Accueil</a>
+    <a href="concours.html" data-page="concours">Le concours</a>
+    <a href="calendrier.html" data-page="calendrier">Calendrier</a>
+    <a href="contact.html" data-page="contact" aria-current="page">Contact</a>
+    <a class="nav-cta" href="candidature.html" data-page="candidature">Candidater <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main-content">
+  <section class="page-hero page-hero-contact" aria-labelledby="page-hero-title">
+    <div class="page-hero-content reveal">
+      <p class="eyebrow light">RESTONS EN CONTACT</p>
+      <h1 id="page-hero-title">Nous sommes<br>à votre <em>écoute.</em></h1>
+      <p>Une question sur le concours ? Écrivez à l&rsquo;organisation.</p>
+    </div>
+  </section>
+
+  <section class="contact-page section-pad" aria-labelledby="contact-title">
+    <div class="contact-intro reveal">
+      <div class="section-kicker">CONTACT OFFICIEL</div>
+      <h2 id="contact-title">Parlons de votre<br><em>projet.</em></h2>
+      <p>Pour toute demande d&rsquo;information concernant les conditions de participation, le calendrier ou le déroulement du concours, contactez l&rsquo;équipe Aiguilles des Îles.</p>
+      <div class="contact-details">
+        <div>
+          <span>EMAIL</span>
+          <a href="mailto:contact@aiguillesdesiles.com">contact@aiguillesdesiles.com</a>
+        </div>
+        <div>
+          <span>LOCALISATION</span>
+          <p>Union des Comores</p>
+        </div>
+      </div>
+      <small class="edit-note">Les coordonnées affichées sont provisoires. Remplacez-les par les contacts officiels.</small>
+    </div>
+    <form class="contact-form reveal" id="contactForm" novalidate aria-label="Formulaire de contact">
+      <div class="form-topline" aria-hidden="true"><span>ENVOYER UN MESSAGE</span><span>CONTACT</span></div>
+      <label>Votre nom<input type="text" name="nom" placeholder="Nom et prénom" required autocomplete="name"></label>
+      <label>Votre adresse e-mail<input type="email" name="email" placeholder="nom@exemple.com" required autocomplete="email"></label>
+      <label>Objet<select name="objet" required autocomplete="off">
+        <option value="">Choisir un sujet</option>
+        <option>Question sur les candidatures</option>
+        <option>Conditions de participation</option>
+        <option>Informations générales</option>
+        <option>Autre demande</option>
+      </select></label>
+      <label>Votre message<textarea name="message" rows="6" placeholder="Écrivez votre message..." required></textarea></label>
+      <button class="button button-dark" type="submit">Envoyer le message <span aria-hidden="true">↗</span></button>
+      <div class="form-message" id="contactMessage" role="status" aria-live="polite" hidden></div>
+      <p class="form-disclaimer">Formulaire de démonstration : aucun message n&rsquo;est envoyé. Il faudra le connecter à un service backend ou à une adresse de réception.</p>
+    </form>
+  </section>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <a class="brand footer-brand" href="index.html" aria-label="Aiguilles des Îles - Accueil">
+    <span class="brand-mark" aria-hidden="true"><img src="assets/images/Logo aiguille des îles .png" alt="Aiguilles des Îles"></span>
+    <span class="brand-name">AIGUILLES <small>DES ÎLES</small></span>
+  </a>
+  <p>Révéler les talents. Célébrer nos îles.</p>
+  <span class="copyright">© <span class="year" aria-live="polite"></span> Aiguilles des Îles</span>
+</footer>
+</body>
+</html>
