@@ -594,6 +594,7 @@ main {
   position: relative;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: var(--color-white);
 }
 
@@ -729,6 +730,7 @@ main {
   height: 340px;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   filter: saturate(0.75);
   transition: transform var(--transition-image), filter var(--transition-image);
 }
@@ -1067,6 +1069,13 @@ input[type="file"] {
   padding: 10px;
 }
 
+/* Fix date input on mobile - ensure it doesn't overflow */
+input[type="date"] {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .consent {
   display: flex;
   gap: 10px;
@@ -1402,6 +1411,11 @@ input[type="file"] {
     display: none;
   }
 
+  .page-hero,
+  .island-photo {
+    background-attachment: scroll;
+  }
+
   .intro-grid,
   .requirements,
   .application,
@@ -1486,6 +1500,21 @@ input[type="file"] {
   .application-form,
   .contact-form {
     padding: 23px 18px;
+  }
+
+  /* Mobile form fixes - prevent overflow */
+  input, select, textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  input[type="date"] {
+    max-width: 100%;
+  }
+
+  /* Ensure file inputs don't overflow */
+  input[type="file"] {
+    max-width: 100%;
   }
 
   .contact-page {
