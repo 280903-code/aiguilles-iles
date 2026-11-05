@@ -268,6 +268,37 @@ small {
 .light-link { color: var(--color-white); }
 .dark-link { color: var(--color-green); margin-top: var(--space-lg); }
 
+/* SVG Icons */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.icon-arrow {
+  margin-left: 8px;
+  transition: transform var(--transition-base);
+}
+
+.icon-down {
+  margin-left: 8px;
+  transition: transform var(--transition-base);
+}
+
+.icon-check {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.text-link:hover .icon-arrow,
+.text-link:hover .icon-down,
+.button:hover .icon-arrow,
+.button:hover .icon-down,
+.nav-cta:hover .icon-arrow {
+  transform: translateX(4px);
+}
+
 /* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */
@@ -1192,8 +1223,17 @@ input[type="date"] {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  background: var(--color-paper);
+  background: var(--color-green-dark);
+  color: var(--color-white);
   flex-wrap: wrap;
+}
+
+.site-footer a {
+  color: var(--color-white);
+}
+
+.site-footer a:hover {
+  color: var(--color-gold);
 }
 
 .footer-brand .brand-mark {
@@ -1209,7 +1249,7 @@ input[type="date"] {
 .site-footer p,
 .copyright {
   font-size: var(--fs-copyright);
-  color: var(--color-muted);
+  color: var(--color-white-78);
   margin: 0;
 }
 
@@ -1383,7 +1423,7 @@ input[type="date"] {
 @media (max-width: 650px) {
   .hero {
     min-height: 650px;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: 58% center;
   }
 
@@ -1413,7 +1453,7 @@ input[type="date"] {
 
   .page-hero,
   .island-photo {
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 
   .intro-grid,
@@ -1510,11 +1550,29 @@ input[type="date"] {
 
   input[type="date"] {
     max-width: 100%;
+    /* Fix date input overflow on mobile */
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   /* Ensure file inputs don't overflow */
   input[type="file"] {
     max-width: 100%;
+  }
+
+  /* Fix date picker specific issues on iOS Safari */
+  @supports (-webkit-appearance: none) {
+    input[type="date"]::-webkit-datetime-edit {
+      overflow: hidden;
+    }
+    input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+      overflow: hidden;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 1;
+    }
   }
 
   .contact-page {
