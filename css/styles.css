@@ -540,7 +540,7 @@ main {
 }
 
 .hero-home {
-  background-image: linear-gradient(90deg, var(--color-green-85), var(--color-green-40) 48%, var(--color-green-15)), url("../assets/images/photo_acc.PNG");
+  background-image: linear-gradient(90deg, var(--color-green-85), var(--color-green-40) 48%, var(--color-green-15)), url("../assets/images/photo_acc.png");
   background-size: cover;
   background-position: center 38%;
   background-attachment: fixed;
@@ -671,7 +671,7 @@ main {
 }
 
 .page-hero-contact {
-  background-image: url("../assets/images/anjouan.webp");
+  background-image: url("../assets/images/IMG_6165.jpg");
 }
 
 /* --------------------------------------------------------------------------
