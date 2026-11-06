@@ -543,7 +543,7 @@ main {
   background-image: linear-gradient(90deg, var(--color-green-85), var(--color-green-40) 48%, var(--color-green-15)), url("../assets/images/photo_acc.png");
   background-size: cover;
   background-position: center 38%;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .hero-content {
@@ -630,7 +630,7 @@ main {
   position: relative;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: var(--color-white);
 }
 
@@ -667,11 +667,13 @@ main {
 }
 
 .page-hero-application {
-  background-image: url("../assets/images/photo_accueil.jpg");
+  background-image: url("../assets/images/IMG_6166.jpg");
+  background-position: center 35%;
 }
 
 .page-hero-contact {
   background-image: url("../assets/images/IMG_6165.jpg");
+  background-position: center 30%;
 }
 
 /* --------------------------------------------------------------------------
@@ -765,8 +767,8 @@ main {
 .island-photo {
   height: 340px;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center 40%;
+  background-attachment: scroll;
   filter: saturate(0.75);
   transition: transform var(--transition-image), filter var(--transition-image);
 }
@@ -1530,8 +1532,8 @@ input[type="date"] {
 @media (max-width: 650px) {
   .hero {
     min-height: 650px;
-    background-attachment: fixed;
-    background-position: 58% center;
+    background-attachment: scroll;
+    background-position: center 45%;
   }
 
   .hero-content {
@@ -1560,7 +1562,12 @@ input[type="date"] {
 
   .page-hero,
   .island-photo {
-    background-attachment: fixed;
+    background-attachment: scroll;
+  }
+
+  .page-hero {
+    height: 480px;
+    min-height: 400px;
   }
 
   .intro-grid,
@@ -1607,10 +1614,28 @@ input[type="date"] {
 
   .island-photo {
     height: 390px;
+    background-attachment: scroll;
+    background-position: center 40%;
   }
 
   .page-hero {
     height: 440px;
+  }
+
+  .page-hero-fashion {
+    background-position: center 40%;
+  }
+
+  .page-hero-calendar {
+    background-position: center 50%;
+  }
+
+  .page-hero-application {
+    background-position: center 30%;
+  }
+
+  .page-hero-contact {
+    background-position: center 35%;
   }
 
   .page-hero-content {
