@@ -178,7 +178,7 @@
   // Year Auto-Update
   // =========================================================================
   function initYear() {
-    const year = new Date().getFullYear();
+    const year = 2027;
     $$('.year').forEach(el => {
       el.textContent = year;
     });
